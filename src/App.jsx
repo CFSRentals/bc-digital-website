@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
 import Products from "./components/Products.jsx";
@@ -6,10 +7,12 @@ import Features from "./components/Features.jsx";
 import Pricing from "./components/Pricing.jsx";
 import FAQ from "./components/FAQ.jsx";
 import Footer from "./components/Footer.jsx";
+import Auth from "./components/Auth.jsx";
+import Dashboard from "./components/Dashboard.jsx";
 
-export default function App() {
+function Home() {
   return (
-    <div className="site">
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -20,6 +23,19 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
-    </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Auth />} />
+        <Route path="/login" element={<Auth />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

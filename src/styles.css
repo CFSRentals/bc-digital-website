@@ -5,3 +5,934 @@
   object-fit: contain;
   border-radius: 12px;
 }
+.authPage {
+  min-height: 100vh;
+  padding: 6rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 560px;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.authHeader {
+  margin-bottom: 1.5rem;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.authForm input,
+.authForm select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.authForm button {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green), #16a34a);
+  color: #04130a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.authMessage {
+  text-align: center;
+  color: var(--muted);
+}
+.dashboardPage {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: var(--bg);
+}
+
+.dashboardSidebar {
+  border-right: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.75);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboardBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.dashboardBrand span,
+.dashboardTopbar span,
+.panelHeader span,
+.dashStat span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.dashboardSidebar nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.dashboardSidebar a,
+.dashboardSidebar button {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 0;
+  border-radius: 14px;
+  padding: 0.9rem;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.dashboardSidebar a.active,
+.dashboardSidebar a:hover,
+.dashboardSidebar button:hover {
+  background: rgba(59, 130, 246, 0.14);
+  color: var(--text);
+}
+
+.dashboardSidebar button {
+  margin-top: auto;
+}
+
+.dashboardMain {
+  padding: 2rem;
+}
+
+.dashboardTopbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboardTopbar h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+}
+
+.dashboardCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashStat,
+.dashboardPanel,
+.dashAppCard {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 22px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.dashStat strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 2rem;
+}
+
+.dashStat p,
+.dashAppCard p,
+.panelHeader p {
+  color: var(--muted);
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 1rem;
+}
+
+.panelHeader h2 {
+  margin: 0.4rem 0 1.2rem;
+}
+
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.dashAppCard div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashAppCard svg {
+  color: #93c5fd;
+}
+
+.dashAppCard div span {
+  color: #86efac;
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.dashAppCard button {
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem;
+}
+
+.checkItem span {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+}
+
+.checkItem.done span {
+  background: var(--green);
+  color: #04130a;
+  font-weight: 900;
+}
+
+.checkItem p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.dashboardLoading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+@media (max-width: 1000px) {
+  .dashboardPage {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardSidebar {
+    display: none;
+  }
+
+  .dashboardCards,
+  .dashboardGrid,
+  .appGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardTopbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.dashHome {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.dashHero {
+  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(59,130,246,.18), rgba(15,23,42,.9));
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dashHero span,
+.dashSectionHeader span,
+.dashStats span {
+  color: #93c5fd;
+  font-weight: 900;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.dashHero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  margin: .6rem 0;
+}
+
+.dashHero p {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.dashHero button,
+.dashProductCard button {
+  border: none;
+  border-radius: 999px;
+  padding: .9rem 1.2rem;
+  background: linear-gradient(135deg, var(--blue), #2563eb);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dashStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.dashStats div,
+.dashSection,
+.dashProductCard {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.dashStats strong {
+  display: block;
+  font-size: 2.3rem;
+  margin: .4rem 0;
+}
+
+.dashStats p,
+.dashProductCard p,
+.activityRow p {
+  color: var(--muted);
+}
+
+.dashSectionHeader h2 {
+  font-size: 1.7rem;
+  margin: .4rem 0 1rem;
+}
+
+.dashProductGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.dashProductCard div {
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+  align-items: center;
+}
+
+.dashProductCard h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.dashProductCard div span {
+  color: #86efac;
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+.activityList {
+  display: grid;
+  gap: .75rem;
+}
+
+.activityRow {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: .9rem;
+}
+
+.activityRow span {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 18px rgba(34,197,94,.75);
+}
+
+@media (max-width: 1000px) {
+  .dashHero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashStats,
+  .dashProductGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.assetsPage {
+  display: grid;
+  gap: 1rem;
+}
+
+.assetsHeader,
+.assetToolbar,
+.assetTableCard {
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.assetsHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.assetsHeader span,
+.assetPanelHeader span {
+  color: #93c5fd;
+  font-weight: 900;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.assetsHeader h1 {
+  margin: 0.4rem 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.assetsHeader p,
+.assetTableTop p,
+.emptyState {
+  color: var(--muted);
+}
+
+.assetsHeader button,
+.assetPanelActions button[type="submit"] {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(135deg, var(--green), #16a34a);
+  color: #04130a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.assetToolbar {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 0.8rem;
+}
+
+.assetToolbar input,
+.assetToolbar select,
+.assetForm input,
+.assetForm select,
+.assetForm textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 0.95rem;
+}
+
+.assetTableWrap {
+  overflow-x: auto;
+}
+
+.assetTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assetTable th,
+.assetTable td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.assetTable th {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.statusBadge {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-weight: 900;
+  font-size: 0.78rem;
+}
+
+.statusBadge.Available {
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+}
+
+.statusBadge.Rented {
+  background: rgba(239, 68, 68, 0.14);
+  color: #fca5a5;
+}
+
+.statusBadge.Repair {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fcd34d;
+}
+
+.statusBadge.Reserved {
+  background: rgba(59, 130, 246, 0.14);
+  color: #93c5fd;
+}
+
+.assetPanelOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assetPanel {
+  width: min(520px, 100%);
+  min-height: 100vh;
+  background: #0f172a;
+  border-left: 1px solid var(--line);
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.assetPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assetPanelHeader h2 {
+  margin: 0.25rem 0 1rem;
+}
+
+.assetPanelHeader button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.assetForm {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.assetForm label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.assetForm textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.assetPanelActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.assetPanelActions button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  background: transparent;
+  color: var(--text);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .assetsHeader,
+  .assetToolbar {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.clickableRow {
+  cursor: pointer;
+}
+
+.clickableRow:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.assetDetailGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin: 1rem 0;
+}
+
+.assetDetailGrid div,
+.assetTimeline {
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.assetDetailGrid span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.assetDetailGrid strong {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.assetTimeline p {
+  color: var(--muted);
+}
+.rentalAssetPicker {
+  display: grid;
+  gap: 0.5rem;
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.rentalAssetOption {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.rentalAssetOption span {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.rentalAssetOption small {
+  color: var(--muted);
+}
+
+.rentalAssetOption.selected {
+  border-color: #86efac;
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.selectedRentalAssets {
+  display: grid;
+  gap: 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.85rem;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.selectedRentalAssets span {
+  color: var(--muted);
+}
+.dashboardPage {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), transparent 30%),
+    var(--bg);
+}
+
+.dashboardSidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid var(--line);
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(18px);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebarTop {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidebarTop h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.sidebarTop p,
+.sidebarUser p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.sideNav {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sideNav button,
+.fleetNav button {
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.sideNav button:hover,
+.fleetNav button:hover {
+  color: var(--text);
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(147, 197, 253, 0.18);
+}
+
+.sideNav button.active,
+.fleetNav button.active {
+  color: white;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(59, 130, 246, 0.15));
+  border-color: rgba(147, 197, 253, 0.35);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+}
+
+.sidebarUser {
+  margin-top: auto;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.sidebarUser button {
+  margin-top: 0.8rem;
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border-radius: 999px;
+  padding: 0.75rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.dashboardMain {
+  padding: 1.4rem;
+  max-width: 1600px;
+  width: 100%;
+}
+
+.fleetNav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(16px);
+}
+
+.fleetNav button {
+  width: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.assetsHeader,
+.assetToolbar,
+.assetTableCard,
+.moduleHero,
+.moduleStats div {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(14px);
+}
+
+.assetsHeader,
+.moduleHero {
+  border-radius: 28px;
+}
+
+.assetsHeader button,
+.moduleHero button,
+.assetPanelActions button[type="submit"],
+.tableButton {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.15rem;
+  background: linear-gradient(135deg, var(--green), #16a34a);
+  color: #04130a;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.18);
+}
+
+.assetTable tbody tr {
+  transition: 0.15s ease;
+}
+
+.assetTable tbody tr:hover {
+  background: rgba(59, 130, 246, 0.09);
+}
+
+.assetPanel {
+  box-shadow: -30px 0 80px rgba(0, 0, 0, 0.35);
+}
+
+.dangerButton {
+  background: rgba(239, 68, 68, 0.14) !important;
+  color: #fca5a5 !important;
+  border: 1px solid rgba(248, 113, 113, 0.25) !important;
+}
+
+@media (max-width: 950px) {
+  .dashboardPage {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardSidebar {
+    position: relative;
+    height: auto;
+  }
+
+  .dashboardMain {
+    padding: 1rem;
+  }
+}
+.repairCostGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.repairPartsBox,
+.repairTotals {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.65);
+}
+
+.repairPartLine {
+  display: grid;
+  grid-template-columns: 1fr 90px 110px auto;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.repairTotals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.repairTotals span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.repairTotals strong {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .repairCostGrid,
+  .repairPartLine,
+  .repairTotals {
+    grid-template-columns: 1fr;
+  }
+}
